@@ -59,9 +59,9 @@ st.divider()
 #plot = prettymaps.plot('Região do Lago, Cascavel, Brasil', radius = False,)
 #st.pyplot(plot)
 st.markdown("""
-<div style='text-align:center'>
-  <h3 style='color: #20201E;'> 🏙️ Escolha da base de dados: município de Cascavel/PR:</h3>
-<figure>
+<div style='justify-content: center; text-align:center'>
+    <h3 style='color: #20201E;'> 🏙️ Escolha da base de dados: município de Cascavel/PR</h3>
+    <figure>
     <img src="https://github.com/pauloalfeu/obras-publicas/blob/main/base/cac_reg_lago.png?raw=true" width="700">
     <figcaption>Região do Lago, Cascavel - Paraná, Brasil. (Figura gerada com a biblioteca Prettymap).</figcaption>
   </figure>
