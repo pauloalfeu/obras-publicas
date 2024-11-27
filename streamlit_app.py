@@ -14,11 +14,12 @@ st.sidebar.markdown("""
 <style>
 a {
   text-decoration: none;
+  color: '#20201e';
 }
 </style>
 
 # Navegue pela página:
-- [Página Inicial](#section-1)
+- [Início](#section-1)
 - [Conceitos, Tabelas e Gráficos](#section-2)
 - [Escolha da base de dados](#section-3)
 - [Upload da base de dados](#section-4)
