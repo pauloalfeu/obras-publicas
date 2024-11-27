@@ -64,7 +64,10 @@ st.divider()
 st.markdown("""
 <div style='text-align:center'>
   <h3 style='color: #20201E;'> 🏙️ O município de Cascavel/PR:</h3>
-  <img src="https://github.com/pauloalfeu/obras-publicas/blob/main/base/cac_reg_lago.png?raw=true" width="600">
+<figure>
+    <img src="https://github.com/pauloalfeu/obras-publicas/blob/main/base/cac_reg_lago.png?raw=true" width="600">
+    <figcaption>Região do Lago, Cascavel - Paraná, Brasil. (Figura gerada com a biblioteca Prettymap).</figcaption>
+  </figure>
 </div>
 """, unsafe_allow_html=True)
 
