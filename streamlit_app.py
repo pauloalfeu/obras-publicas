@@ -51,6 +51,7 @@ with tab2:
     st.markdown("* Feita a etapa de remoção ou seleção de filtros você estará pronto para salvar a base de dados em seu dispositivo, basta clicar na opção \"DADOS ABERTOS\", e depois, clicando em \"CONFIRMAR\".")
 
 ################################### SEÇÃO DE UPLOAD DE DATAFRAME
+
 st.divider()
 st.markdown("##### Carregue a base de dados para gerar as tabelas e gráficos:")
 st.markdown("Busque um arquivo **_.csv_** clicando em **\"_Browse files_\"** no campo abaixo:")
@@ -61,7 +62,10 @@ if uploaded_file is not None:
     dataframe = pd.read_csv(uploaded_file, sep=';', encoding='latin1')
     Obras_CAC = dataframe
     st.info("Base de dados carregada com sucesso!")
-    ################################### TRATAMENTO DO DATAFRAME
+
+
+
+################################### TRATAMENTO DO ARQUIVO P/ DATAFRAME ##############################
 
     # Convertendo a coluna 'Data de Início' para datetime
     Obras_CAC[['Data de Cadastro', 'Data de Início', 'Previsão Conclusão']] = Obras_CAC[['Data de Cadastro', 'Data de Início', 'Previsão Conclusão']].apply(pd.to_datetime, dayfirst=True)
@@ -69,11 +73,16 @@ if uploaded_file is not None:
     #Criando uma nova coluna com o ano
     Obras_CAC['Ano'] = Obras_CAC['Data de Início'].dt.year
 
+    # Convertendo a coluna 'Data de Início' para datetime
+    Obras_CAC[['Data de Cadastro', 'Data de Início', 'Previsão Conclusão']] = Obras_CAC[['Data de Cadastro', 'Data de Início', 'Previsão Conclusão']].apply(pd.to_datetime, dayfirst=True)
+
+
+
+    ################################### APRESENTANDO O DATAFRAME
     st.divider()
     st.markdown("#### 🔎 Aplicando filtros:")
     st.markdown("Agora que a base de dados foi carregada, você será capaz de filtrar o conteúdo para encontrar dados específicos que podem auxiliar na obtenção de novas informações.")
     st.markdown("> É possível selecionar um ou mais anos de cadastro de obra, sua situação e o percentual de conclusão (para este último, basta arrastar as extermidades da barra para atingir a porcentagem desejada.)")
-    ################################### APRESENTANDO O DATAFRAME
     years_sorted = Obras_CAC["Ano"].unique()
     years_sorted= pd.DataFrame(years_sorted)
     years_sorted = years_sorted.sort_values(by=0, ascending=False)
