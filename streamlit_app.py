@@ -65,7 +65,7 @@ if uploaded_file is not None:
 
 
 
-################################### TRATAMENTO DO ARQUIVO P/ DATAFRAME ##############################
+########################## TRATAMENTO DO ARQUIVO P/ DATAFRAME ##############################
 
     # Convertendo a coluna 'Data de Início' para datetime
     Obras_CAC[['Data de Cadastro', 'Data de Início', 'Previsão Conclusão']] = Obras_CAC[['Data de Cadastro', 'Data de Início', 'Previsão Conclusão']].apply(pd.to_datetime, dayfirst=True)
@@ -99,7 +99,11 @@ if uploaded_file is not None:
 
     Obras_CAC['Valor Total'] = Obras_CAC['Valor Total'].apply(limpar_e_converter)
 
-    ################################### APRESENTANDO O DATAFRAME
+
+
+
+    ################## APRESENTANDO O DATAFRAME // FILTROS DO USUARIO ##################
+
     st.divider()
     st.markdown("#### 🔎 Aplicando filtros:")
     st.markdown("Agora que a base de dados foi carregada, você será capaz de filtrar o conteúdo para encontrar dados específicos que podem auxiliar na obtenção de novas informações.")
@@ -189,9 +193,9 @@ if uploaded_file is not None:
             i += 1
 
     st.divider()
-    tab4, tab5 = st.tabs(["Nuvem de palavras", "Base de dados"])
+    tab3, tab4 = st.tabs(["Nuvem de palavras", "Base de dados"])
     
-    with tab4:
+    with tab3:
         st.markdown("#### Nuvem de Palavras-Chave: Descrições das Obras Públicas")
         word_freq = dict(zip(OBRAS_KeyWords['Palavra'], OBRAS_KeyWords['Contagem']))
         #word_freq
@@ -210,11 +214,16 @@ if uploaded_file is not None:
         plt.imshow(wordcloud, interpolation='bilinear')
         plt.max_font_size = 150
         plt.axis('off')
+
+        # Adicionando um retângulo (borda) ao redor da imagem
+        rect = patches.Rectangle((0, 0), 10, 7, linewidth=2, edgecolor='r', facecolor='none')
+        plt.gca().add_patch(rect)
+
         plt.show()
         st.pyplot(plt)
         st.markdown("A imagem acima representa uma visualização das palavras mais frequentes encontradas nas descrições das obras públicas. Após um processo de limpeza e contagem, as palavras mais comuns, como ""lote"", ""municipal"" e ""pública"", foram removidas para destacar os termos mais relevantes e específicos. Essa nuvem de palavras oferece uma visão geral dos temas e características mais comuns presentes nas obras analisadas.")
 
-    with tab5:
+    with tab4:
         st.data_editor(OBRAS_KeyWords)
 
 st.divider()
