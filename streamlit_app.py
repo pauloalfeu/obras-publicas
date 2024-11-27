@@ -19,6 +19,7 @@ a {
 </style>
 
 # Navegue pela página:
+- <a>Início</a>
 - [Início](#section-1)
 - [Conceitos, Tabelas e Gráficos](#section-2)
 - [Escolha da base de dados](#section-3)
