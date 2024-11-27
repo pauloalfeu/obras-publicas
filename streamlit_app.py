@@ -63,8 +63,8 @@ st.divider()
 #st.image("https://github.com/pauloalfeu/obras-publicas/blob/main/base/cac_reg_lago.png?raw=true", width=600)
 st.markdown("""
 <div style='text-align:center'>
-  <img src="https://github.com/pauloalfeu/obras-publicas/blob/main/base/cac_reg_lago.png?raw=true" width="600">
   <h3 style='color: #20201E;'> 🏙️ O município de Cascavel/PR:</h3>
+  <img src="https://github.com/pauloalfeu/obras-publicas/blob/main/base/cac_reg_lago.png?raw=true" width="600">
 </div>
 """, unsafe_allow_html=True)
 
