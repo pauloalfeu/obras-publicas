@@ -214,6 +214,8 @@ if uploaded_file is not None:
 
         # Define a cor da borda (por exemplo, preto)
         border_color = '#f2f3f5'
+        # Adicionando título
+        plt.title("Minha Nuvem de Palavras", fontsize=20, fontweight='bold')
         plt.figure(figsize=(10, 7), facecolor=border_color)  # Define a cor de fundo (borda)
         plt.imshow(wordcloud, interpolation='bilinear')
         plt.max_font_size = 150
