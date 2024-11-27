@@ -60,7 +60,7 @@ st.divider()
 #st.pyplot(plot)
 st.markdown("""
 <div style='justify-content: center; text-align:center'>
-    <h4 style='color: #20201E;'> 🏙️ Escolha da base de dados: município de Cascavel/PR</h4>
+    <h4 style='color: #20201E;'> 🏙️ Escolha da base de dados: município de Cascavel/PR.</h4>
     <figure>
     <img src="https://github.com/pauloalfeu/obras-publicas/blob/main/base/cac_reg_lago.png?raw=true" width="700">
     <figcaption>Região do Lago, Cascavel - Paraná, Brasil. (Figura gerada com a biblioteca Prettymap).</figcaption>
@@ -71,7 +71,7 @@ st.markdown("""
 ################################### SEÇÃO DE UPLOAD DE DATAFRAME
 
 st.divider()
-st.markdown("#### Carregue a base de dados para gerar as tabelas e gráficos:")
+st.markdown("##### Carregue a base de dados para gerar as tabelas e gráficos:")
 st.markdown("Busque um arquivo **_.csv_** clicando em **\"_Browse files_\"** no campo abaixo:")
 st.warning(":bulb: **Importante:** siga as etapas apresentadas na guia **\"_Tutorial - Obtendo dados no Portal da Transparência de Cascavel_\"** para fazer o download do arquivo correto.")
 uploaded_file = st.file_uploader("", help="Arraste e solte seu arquivo aqui")
