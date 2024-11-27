@@ -1,6 +1,8 @@
 # 🏗 ANÁLISE DO ANDAMENTO DE OBRAS PÚBLICAS UTILIZANDO DADOS DE PORTAIS DE TRANSPARÊNCIA
 
-Trabalho desenvolvido para disciplinade Ciência de Dados, disponível para acesso em: 
+Trabalho desenvolvido para disciplina de Ciência de Dados. 
+
+Disponível para acesso em: 
 
 [![Abrir no Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://obras-publicas.streamlit.app/)
 
