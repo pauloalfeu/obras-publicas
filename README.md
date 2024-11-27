@@ -1,6 +1,6 @@
 # 🏗 ANÁLISE DO ANDAMENTO DE OBRAS PÚBLICAS UTILIZANDO DADOS DE PORTAIS DE TRANSPARÊNCIA
 
-A simple Streamlit app template for you to modify!
+Trabalho desenvolvido para disciplinade Ciência de Dados, disponível para acesso em: 
 
 [![Abrir no Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://obras-publicas.streamlit.app/)
 
