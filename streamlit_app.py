@@ -78,6 +78,8 @@ if uploaded_file is not None:
 
     #Renovendo colunas
     Obras_CAC = Obras_CAC.drop('Entidade', axis=1)
+    Obras_CAC = Obras_CAC.drop('Número/Ano Intervenção', axis=1)
+    Obras_CAC = Obras_CAC.drop('Número/Ano Obra', axis=1)
 
 
     ################################### APRESENTANDO O DATAFRAME
