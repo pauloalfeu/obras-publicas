@@ -12,11 +12,10 @@ st.set_page_config(page_title="Obras Publicas")
 
 st.sidebar.markdown("""
 # Navegue pela página:
-- <a href="#section-1" style="color:#20201e; text-decoration: none;">Início</a>
-- [Início](#section-1)
-- [Conceitos, Tabelas e Gráficos](#section-2)
-- [Escolha da base de dados](#section-3)
-- [Upload da base de dados](#section-4)
+<a href="#section-1" style="color:#20201e; text-decoration: none;">Início</a>
+<a href="#section-2" style="color:#20201e; text-decoration: none;">Conceitos, Tabelas e Gráficos</a>
+<a href="#section-3" style="color:#20201e; text-decoration: none;">Escolha da base de dados</a>
+<a href="#section-4" style="color:#20201e; text-decoration: none;">Upload da base de dados</a>
 """, unsafe_allow_html=True)
 
 #st.markdown("### 🏗️ ANÁLISE DO ANDAMENTO DE OBRAS PÚBLICAS UTILIZANDO DADOS DE PORTAIS DE TRANSPARÊNCIA")
