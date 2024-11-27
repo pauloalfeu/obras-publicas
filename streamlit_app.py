@@ -50,7 +50,7 @@ with tab2:
 ################################### SEÇÃO DE UPLOAD DE DATAFRAME
 st.divider()
 st.markdown("##### Carregue um arquivo _.csv_ clicando em \"Browse files\" no campo abaixo:")
-st.markdown("> :bulb: **Importante:** siga as etapas apresentadas na guia **Tutorial - Obtendo dados no Portal da Transparência de Cascavel** para fazer o download do arquivo correto.")
+st.markdown("> :bulb: **Importante:** siga as etapas apresentadas na guia *Tutorial - Obtendo dados no Portal da Transparência de Cascavel* para fazer o download do arquivo correto.")
 uploaded_file = st.file_uploader("")
 if uploaded_file is not None:
     # Recebendo arquivo.csv:
