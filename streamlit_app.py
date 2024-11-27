@@ -6,7 +6,6 @@ import matplotlib.patches as patches
 from wordcloud import WordCloud
 import PIL.Image as Image
 from collections import Counter
-import prettymaps
 import re
 
 st.set_page_config(page_title="Obras Publicas")
@@ -57,13 +56,11 @@ with tab2:
 ####################### ESCOLHA DA BASE E APRESENTAÇÃO DO MUNICIPIO/CASCAVEL ################
 
 st.divider()
-#st.markdown("<h3 style='color: #20201E; text-align: center;'> 🏙️ O município de Cascavel/PR:</h3>", unsafe_allow_html=True)
 #plot = prettymaps.plot('Região do Lago, Cascavel, Brasil', radius = False,)
 #st.pyplot(plot)
-#st.image("https://github.com/pauloalfeu/obras-publicas/blob/main/base/cac_reg_lago.png?raw=true", width=600)
 st.markdown("""
 <div style='text-align:center'>
-  <h3 style='color: #20201E;'> 🏙️ O município de Cascavel/PR:</h3>
+  <h3 style='color: #20201E;'> 🏙️ Escolha da base de dados: município de Cascavel/PR:</h3>
 <figure>
     <img src="https://github.com/pauloalfeu/obras-publicas/blob/main/base/cac_reg_lago.png?raw=true" width="700">
     <figcaption>Região do Lago, Cascavel - Paraná, Brasil. (Figura gerada com a biblioteca Prettymap).</figcaption>
