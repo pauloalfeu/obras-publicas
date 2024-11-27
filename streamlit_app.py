@@ -215,11 +215,11 @@ if uploaded_file is not None:
         # Define a cor da borda (por exemplo, preto)
         border_color = '#f2f3f5'
         # Adicionando título
-        plt.title("Minha Nuvem de Palavras", fontsize=20, fontweight='bold')
         plt.figure(figsize=(10, 7), facecolor=border_color)  # Define a cor de fundo (borda)
         plt.imshow(wordcloud, interpolation='bilinear')
         plt.max_font_size = 150
         plt.axis('off')
+        plt.title("Minha Nuvem de Palavras", fontsize=20, fontweight='bold')
         st.pyplot(plt)
         st.markdown("A imagem acima representa uma visualização das palavras mais frequentes encontradas nas descrições das obras públicas. Após um processo de limpeza e contagem, as palavras mais comuns, como ""lote"", ""municipal"" e ""pública"", foram removidas para destacar os termos mais relevantes e específicos. Essa nuvem de palavras oferece uma visão geral dos temas e características mais comuns presentes nas obras analisadas.")
 
