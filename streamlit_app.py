@@ -123,15 +123,7 @@ if uploaded_file is not None:
 
     ################################### Adicionando o gráfico de distribuição das obras por ‘data de inicio’
     
-    st.divider()
-    st.markdown("##### Gráfico de distribuição das obras por ‘data de inicio’:")
-    st.markdown("Utilizando a base de dados enviada e a biblioteca Seaborn, foi possível criar um gráfico para visualizar a distribuição de dados relacionados à ""Data de Início"" do conjunto total de obras.")
-    sns.displot(Obras_CAC['Data de Início'], bins= 40, kde=True).set(title='Obras por Data de Início')
-    st.pyplot(plt)
-    st.markdown("**O que o gráfico mostra:**")
-    st.markdown("**Distribuição das datas de início:** O gráfico exibe a frequência com que as obras foram iniciadas em diferentes períodos.")
-    st.markdown("**Histograma:** As barras representam o número de obras que iniciaram em cada intervalo de datas.")
-    st.markdown("**Curva KDE:** A linha suave sobre o histograma mostra a densidade dos dados, ajudando a identificar picos e tendências na distribuição.")
+
     
     ################################### 
     #from collections import Counter
