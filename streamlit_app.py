@@ -16,7 +16,7 @@ with tab1:
     st.markdown("#### O que Caracteriza uma Obra Pública?")
     col1, col2 = st.columns(2)
     with col1:
-        st.markdown("###### Definição de Obra Pública:")
+        st.markdown("<center>*Definição de Obra Pública:*</center>")
         st.image("https://egob.com/wp-content/uploads/2021/01/egob_obra_publica-1024x671.png", width=220)
         st.markdown("De acordo com o Conselho Nacional do Ministério Público, obra pública é considerada “toda construção, reforma, fabricação, recuperação ou ampliação de bem público” (CNMP, 2017).")
         st.markdown("Ressalte-se que a qualidade de uma obra depende do adequado gerenciamento de suas diversas etapas intermediárias e da participação de profissionais capacitados (CNMP, 2017).")
