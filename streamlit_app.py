@@ -217,7 +217,7 @@ if uploaded_file is not None:
         plt.axis('off')
 
         # Adicionando um retângulo (borda) ao redor da imagem
-        rect = patches.Rectangle((0, 0), 10, 7, linewidth=2, edgecolor='r', facecolor='none')
+        rect = patches.Rectangle((10, 7), 10, 7, linewidth=2, edgecolor='r', facecolor='none')
         plt.gca().add_patch(rect)
 
         plt.show()
