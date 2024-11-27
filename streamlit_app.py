@@ -58,6 +58,10 @@ with tab2:
 
 st.divider()
 st.markdown("<h3 style='color: #20201E; text-align: center;'> 🏙️ O município de Cascavel/PR:</h3>", unsafe_allow_html=True)
+plot = prettymaps.plot(
+    'Região do Lago, Cascavel, Brasil', radius = False,
+)
+st.pyplot(plot)
 
 
 
