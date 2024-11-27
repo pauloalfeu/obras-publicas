@@ -10,7 +10,7 @@ st.markdown("### 🏗️ ANÁLISE DO ANDAMENTO DE OBRAS PÚBLICAS UTILIZANDO DAD
 
 ################################### SEÇÃO DE GUIAS
 
-tab1, tab2, tab3 = st.tabs(["Obra Pública", "Lei de Acesso à Informação", "Portal da Transparência de Cascavel "])
+tab1, tab2 = st.tabs(["Obra Pública", "Tutorial - Portal da Transparência de Cascavel "])
 
 with tab1:
     st.markdown("#### Obra Pública: Conceito e Características")
@@ -46,7 +46,7 @@ with tab2:
 ################################### SEÇÃO DE UPLOAD DE DATAFRAME
 st.divider()
 st.markdown("##### Carregue um arquivo _.csv_ clicando em \"Browse files\" no campo abaixo:")
-st.markdown("> **Importante:** siga as etapas apresentadas na guia **Portal da Transparência de Cascavel** para fazer o download do arquivo correto.")
+st.markdown("> **Importante:** siga as etapas apresentadas na guia **Tutorial - Portal da Transparência de Cascavel** para fazer o download do arquivo correto.")
 uploaded_file = st.file_uploader("")
 if uploaded_file is not None:
     # Recebendo arquivo.csv:
