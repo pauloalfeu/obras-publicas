@@ -19,7 +19,7 @@ tab1, tab2 = st.tabs(["🏠 Página Inicial - Conceitos, Tabelas e Gráficos", "
 
 with tab1:
     #st.markdown("#### O que caracteriza uma Obra Pública?")
-    st.markdown("<h3 style='color: #20201E; text-align: center;'> O que caracteriza uma Obra Pública?</h3>", unsafe_allow_html=True)
+    st.markdown("<h4 style='color: #20201E; text-align: center;'> O que caracteriza uma Obra Pública?</h4>", unsafe_allow_html=True)
     col1, col2 = st.columns(2)
     with col1:
         st.markdown(">**Definição de Obra Pública:**")
