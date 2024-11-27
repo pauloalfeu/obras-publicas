@@ -53,6 +53,12 @@ with tab2:
     st.markdown("##### 5. **Baixando a base de dados:**")
     st.markdown("* Feita a etapa de remoção ou seleção de filtros você estará pronto para salvar a base de dados em seu dispositivo, basta clicar na opção \"DADOS ABERTOS\", e depois, clicando em \"CONFIRMAR\".")
 
+####################### ESCOLHA DA BASE E APRESENTAÇÃO DO MUNICIPIO/CASCAVEL ################
+
+st.markdown("<h3 style='color: #20201E; text-align: center;'> 🏙️ O município de Cascavel/PR:</h3>", unsafe_allow_html=True)
+
+
+
 ################################### SEÇÃO DE UPLOAD DE DATAFRAME
 
 st.divider()
