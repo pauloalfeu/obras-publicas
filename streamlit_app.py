@@ -60,7 +60,7 @@ st.divider()
 st.markdown("<h3 style='color: #20201E; text-align: center;'> 🏙️ O município de Cascavel/PR:</h3>", unsafe_allow_html=True)
 #plot = prettymaps.plot('Região do Lago, Cascavel, Brasil', radius = False,)
 #st.pyplot(plot)
-st.image("https://github.com/pauloalfeu/obras-publicas/blob/main/base/cac_reg_lago.png", width=600)
+st.image("https://github.com/pauloalfeu/obras-publicas/blob/main/base/cac_reg_lago.png?raw=true", width=600)
 
 
 ################################### SEÇÃO DE UPLOAD DE DATAFRAME
