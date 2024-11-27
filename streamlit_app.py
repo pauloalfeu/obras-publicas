@@ -6,7 +6,7 @@ from wordcloud import WordCloud
 from collections import Counter
 import re
 
-st.markdown("###🏗️ ANÁLISE DO ANDAMENTO DE OBRAS PÚBLICAS UTILIZANDO DADOS DE PORTAIS DE TRANSPARÊNCIA")
+st.markdown("### 🏗️ ANÁLISE DO ANDAMENTO DE OBRAS PÚBLICAS UTILIZANDO DADOS DE PORTAIS DE TRANSPARÊNCIA")
 
 ################################### SEÇÃO DE GUIAS
 
