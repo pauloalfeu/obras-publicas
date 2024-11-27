@@ -69,8 +69,9 @@ if uploaded_file is not None:
     Obras_CAC['Ano'] = Obras_CAC['Data de Início'].dt.year
 
     st.divider()
-    st.markdown("##### Aplicando filtros:")
-    st.markdown("Agora que a base de dados foi carregada, você será capaz de filtrar o conteúdo para encontrar dados específicos que podem auxiliar na obtenção de novas informações. É possível selecionar um ou mais anos de cadastro de obra, sua situação e o percentual de conclusão (para este último, basta arrastar as extermidades da barra para atingir a porcentagem desejada.)")
+    st.markdown("#### Aplicando filtros:")
+    st.markdown("Agora que a base de dados foi carregada, você será capaz de filtrar o conteúdo para encontrar dados específicos que podem auxiliar na obtenção de novas informações.")
+    st.markdown("É possível selecionar um ou mais anos de cadastro de obra, sua situação e o percentual de conclusão (para este último, basta arrastar as extermidades da barra para atingir a porcentagem desejada.)")
     ################################### APRESENTANDO O DATAFRAME
     years_sorted = Obras_CAC["Ano"].unique()
     years_sorted= pd.DataFrame(years_sorted)
