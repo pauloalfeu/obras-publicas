@@ -14,7 +14,6 @@ st.sidebar.markdown("""
 <style>
 a {
   text-decoration: none;
-  color: inherit;
 }
 </style>
 
