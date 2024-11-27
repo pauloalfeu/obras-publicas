@@ -73,8 +73,8 @@ if uploaded_file is not None:
     #Criando uma nova coluna com o ano
     Obras_CAC['Ano'] = Obras_CAC['Data de Início'].dt.year
 
-    # Convertendo a coluna 'Data de Início' para datetime
-    Obras_CAC[['Data de Cadastro', 'Data de Início', 'Previsão Conclusão']] = Obras_CAC[['Data de Cadastro', 'Data de Início', 'Previsão Conclusão']].apply(pd.to_datetime, dayfirst=True)
+    # Criando uma nova coluna com tempo da obra em dias
+    Obras_CAC['Tempo Obra (Dias)'] = (Obras_CAC['Previsão Conclusão'] - Obras_CAC['Data de Início']).dt.days
 
 
 
