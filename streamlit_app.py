@@ -6,6 +6,7 @@ import matplotlib.patches as patches
 from wordcloud import WordCloud
 import PIL.Image as Image
 from collections import Counter
+import prettymaps
 import re
 
 st.set_page_config(page_title="Obras Publicas")
