@@ -65,7 +65,7 @@ st.markdown("""
 <div style='text-align:center'>
   <h3 style='color: #20201E;'> 🏙️ O município de Cascavel/PR:</h3>
 <figure>
-    <img src="https://github.com/pauloalfeu/obras-publicas/blob/main/base/cac_reg_lago.png?raw=true" width="600">
+    <img src="https://github.com/pauloalfeu/obras-publicas/blob/main/base/cac_reg_lago.png?raw=true" width="700">
     <figcaption>Região do Lago, Cascavel - Paraná, Brasil. (Figura gerada com a biblioteca Prettymap).</figcaption>
   </figure>
 </div>
