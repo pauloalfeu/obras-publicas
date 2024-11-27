@@ -10,6 +10,14 @@ import re
 
 st.set_page_config(page_title="Obras Publicas")
 
+st.sidebar.markdown('''
+# Sections
+- [Página Inicial](#section-1)
+- [Conceitos, Tabelas e Gráficos](#section-2)
+- [Escolha da base de dados](#section-3)
+- [Upload da base de dados](#section-4)
+''', unsafe_allow_html=True)
+
 #st.markdown("### 🏗️ ANÁLISE DO ANDAMENTO DE OBRAS PÚBLICAS UTILIZANDO DADOS DE PORTAIS DE TRANSPARÊNCIA")
 st.markdown("<h3 style='color: #20201E; text-align: center;'> 🏗️ ANÁLISE DO ANDAMENTO DE OBRAS PÚBLICAS UTILIZANDO DADOS DE PORTAIS DE TRANSPARÊNCIA</h3>", unsafe_allow_html=True)
 
@@ -71,7 +79,7 @@ st.markdown("""
 ################################### SEÇÃO DE UPLOAD DE DATAFRAME
 
 st.divider()
-st.markdown("##### Carregue a base de dados para gerar as tabelas e gráficos:")
+st.markdown("#### Carregue a base de dados para gerar as tabelas e gráficos:")
 st.markdown("Busque um arquivo **_.csv_** clicando em **\"_Browse files_\"** no campo abaixo:")
 st.warning(":bulb: **Importante:** siga as etapas apresentadas na guia **\"_Tutorial - Obtendo dados no Portal da Transparência de Cascavel_\"** para fazer o download do arquivo correto.")
 uploaded_file = st.file_uploader("", help="Arraste e solte seu arquivo aqui")
