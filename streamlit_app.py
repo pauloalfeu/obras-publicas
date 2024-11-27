@@ -10,7 +10,8 @@ import re
 
 st.set_page_config(page_title="Obras Publicas")
 
-st.markdown("### 🏗️ ANÁLISE DO ANDAMENTO DE OBRAS PÚBLICAS UTILIZANDO DADOS DE PORTAIS DE TRANSPARÊNCIA")
+#st.markdown("### 🏗️ ANÁLISE DO ANDAMENTO DE OBRAS PÚBLICAS UTILIZANDO DADOS DE PORTAIS DE TRANSPARÊNCIA")
+st.markdown("<h3 style='color: #20201E; text-align: center;'> 🏗️ ANÁLISE DO ANDAMENTO DE OBRAS PÚBLICAS UTILIZANDO DADOS DE PORTAIS DE TRANSPARÊNCIA</h3>", unsafe_allow_html=True)
 
 ################################### SEÇÃO DE GUIAS
 
