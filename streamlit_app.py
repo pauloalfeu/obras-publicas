@@ -6,6 +6,8 @@ from wordcloud import WordCloud
 from collections import Counter
 import re
 
+st.set_page_config(page_title="Obras Publicas")
+
 st.markdown("### 🏗️ ANÁLISE DO ANDAMENTO DE OBRAS PÚBLICAS UTILIZANDO DADOS DE PORTAIS DE TRANSPARÊNCIA")
 
 ################################### SEÇÃO DE GUIAS
