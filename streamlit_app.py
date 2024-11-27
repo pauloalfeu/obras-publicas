@@ -213,7 +213,7 @@ if uploaded_file is not None:
         wordcloud = WordCloud(width=900, height=400, background_color='white', colormap='Set2', mask= python_mask, contour_color="gray", contour_width=1, min_font_size=3).generate_from_frequencies(word_freq)
 
         # Define a cor da borda (por exemplo, preto)
-        border_color = 'black'
+        border_color = '#20201e'
         plt.figure(figsize=(10, 7), facecolor=border_color)  # Define a cor de fundo (borda)
         plt.imshow(wordcloud, interpolation='bilinear')
         plt.max_font_size = 150
