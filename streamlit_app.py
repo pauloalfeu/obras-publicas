@@ -77,11 +77,11 @@ if uploaded_file is not None:
     years_sorted= pd.DataFrame(years_sorted)
     years_sorted = years_sorted.sort_values(by=0, ascending=False)
     
-    anos = st.multiselect("Escolha o ano:", years_sorted)
-    situacao = st.multiselect("Escolha a situação da obra:", Obras_CAC["Situação"].unique())
+    anos = st.multiselect("**Escolha o ano:**", years_sorted)
+    situacao = st.multiselect("**Escolha a situação da obra:**", Obras_CAC["Situação"].unique())
     menor_p = Obras_CAC['Percentual Conclusão (%)'].min()
     maior_p = Obras_CAC['Percentual Conclusão (%)'].max()
-    percent = st.slider("Percentual de conclusão (%):", menor_p, maior_p, (menor_p, maior_p))
+    percent = st.slider("**Percentual de conclusão (%):**", menor_p, maior_p, (menor_p, maior_p))
 
    #Utilizando st.empty(), preenche o espaço com o widget quando necessário.
     placeholder = st.empty()
