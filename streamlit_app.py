@@ -11,6 +11,11 @@ import re
 st.set_page_config(page_title="Obras Publicas")
 
 st.sidebar.markdown("""
+<style>
+a:hover {
+  font-weight: bold;
+}
+</style>
 <a href="#section-1" style="color:#20201e; text-decoration: none;">Início</a>
 
 <a href="#section-2" style="color:#20201e; text-decoration: none;">Conceitos, Tabelas e Gráficos</a>
