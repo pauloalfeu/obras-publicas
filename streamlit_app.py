@@ -81,6 +81,23 @@ if uploaded_file is not None:
     Obras_CAC = Obras_CAC.drop('Número/Ano Intervenção', axis=1)
     Obras_CAC = Obras_CAC.drop('Número/Ano Obra', axis=1)
 
+    # Convertendo os valores da coluna 'Valor Total'
+    def limpar_e_converter(valor):
+        valor_str = str(valor)
+        valor_str = valor_str.rstrip('.')  # Remove pontos no final
+        # Substitui a vírgula por ponto
+        valor_str = valor_str.replace(',', '.')
+        # Remove todos os pontos, exceto o último
+        valor_str = valor_str.replace('.', '', valor_str.count('.') - 1)
+        # Remove espaços em branco
+        valor_str = valor_str.strip()
+        try:
+            return float(valor_str)
+        except ValueError:
+            print(f"Erro ao converter {valor} para float.")
+            return np.nan
+
+    Obras_CAC['Valor Total'] = Obras_CAC['Valor Total'].apply(limpar_e_converter)
 
     ################################### APRESENTANDO O DATAFRAME
     st.divider()
