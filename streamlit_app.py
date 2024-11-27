@@ -10,18 +10,18 @@ st.markdown("### 🏗️ ANÁLISE DO ANDAMENTO DE OBRAS PÚBLICAS UTILIZANDO DAD
 
 ################################### SEÇÃO DE GUIAS
 
-tab1, tab2 = st.tabs(["Página Inicical - Conceitos e Gráficos", "Tutorial - Obtendo dados no Portal da Transparência de Cascavel "])
+tab1, tab2 = st.tabs(["Página Inicical - Conceitos, Tabelas e Gráficos", "Tutorial - Obtendo dados no Portal da Transparência de Cascavel "])
 
 with tab1:
-    st.markdown("## O que Caracteriza uma Obra Pública?")
+    st.markdown("### O que Caracteriza uma Obra Pública?")
     col1, col2 = st.columns(2)
     with col1:
-        st.markdown("##### Definição de Obra Pública:")
+        st.markdown("###### Definição de Obra Pública:")
         st.image("https://egob.com/wp-content/uploads/2021/01/egob_obra_publica-1024x671.png", width=220)
         st.markdown("De acordo com o Conselho Nacional do Ministério Público, obra pública é considerada “toda construção, reforma, fabricação, recuperação ou ampliação de bem público” (CNMP, 2017).")
         st.markdown("Ressalte-se que a qualidade de uma obra depende do adequado gerenciamento de suas diversas etapas intermediárias e da participação de profissionais capacitados (CNMP, 2017).")
     with col2:
-        st.markdown("##### Lei de Acesso à Informação:")
+        st.markdown("###### Lei de Acesso à Informação:")
         st.image("https://goias.gov.br/educacao/wp-content/uploads/sites/40/2024/03/lei.png", width=400)
         st.markdown(" A Lei de Acesso à Informação Nº 12.527, foi sancionada em 18 de novembro de 2011. Esta tem como diretriz o princípio de publicidade máxima da administração pública. ")
         st.markdown("O artigo 3º da lei prevê a utilização de ferramentas de comunicação viabilizadas pela tecnologia da informação. Uma das principais manifestações da utilização da T.I. na publicidade dos dados públicos está no chamados Portais da Transparência.")
