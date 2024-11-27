@@ -210,10 +210,10 @@ if uploaded_file is not None:
         
         python_mask = np.array(Image.open('./base/CAC_logo.png')) 
         #para arquivos locais mudar o final do trecho de código acima
-        wordcloud = WordCloud(width=900, height=400, background_color='white', colormap='Set2', mask= python_mask, contour_color="gray", contour_width=1, min_font_size=3).generate_from_frequencies(word_freq)
+        wordcloud = WordCloud(width=900, height=400, background_color='f2f3f5', colormap='Set2', mask= python_mask, contour_color="gray", contour_width=1, min_font_size=3).generate_from_frequencies(word_freq)
 
         # Define a cor da borda (por exemplo, preto)
-        border_color = '#926C05'
+        border_color = '#f2f3f5'
         plt.figure(figsize=(10, 7), facecolor=border_color)  # Define a cor de fundo (borda)
         plt.imshow(wordcloud, interpolation='bilinear')
         plt.max_font_size = 150
