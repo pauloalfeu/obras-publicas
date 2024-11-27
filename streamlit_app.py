@@ -52,7 +52,7 @@ with tab2:
 ################################### SEÇÃO DE UPLOAD DE DATAFRAME
 st.divider()
 st.markdown("##### Carregue a base de dados para gerar as tabelas e gráficos:")
-st.markdown("Busque um arquivo **_.csv_** clicando em **\"Browse files\"** no campo abaixo:")
+st.markdown("Busque um arquivo **_.csv_** clicando em **\"_Browse files_\"** no campo abaixo:")
 st.warning(":bulb: **Importante:** siga as etapas apresentadas na guia *\"Tutorial - Obtendo dados no Portal da Transparência de Cascavel\"* para fazer o download do arquivo correto.")
 uploaded_file = st.file_uploader("", help="Arraste e solte seu arquivo aqui")
 if uploaded_file is not None:
