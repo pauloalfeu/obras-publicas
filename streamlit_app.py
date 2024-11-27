@@ -14,10 +14,9 @@ tab1, tab2, tab3 = st.tabs(["Obra Pública", "Lei de Acesso à Informação", "P
 
 with tab1:
     st.markdown("#### Obra Pública: Conceito e Características")
-    #st.image("https://egob.com/wp-content/uploads/2021/01/egob_obra_publica-1024x671.png", width=350)
+    st.image("https://egob.com/wp-content/uploads/2021/01/egob_obra_publica-1024x671.png", width=350)
     st.markdown("De acordo com o Conselho Nacional do Ministério Público, obra pública é considerada “toda construção, reforma, fabricação, recuperação ou ampliação de bem público” (CNMP, 2017).")
     st.markdown("Ressalte-se que a qualidade de uma obra depende do adequado gerenciamento de suas diversas etapas intermediárias e da participação de profissionais capacitados (CNMP, 2017).")
-with tab2:
     st.markdown("#### Lei de Acesso à Informação")
     st.image("https://goias.gov.br/educacao/wp-content/uploads/sites/40/2024/03/lei.png", width=400)
     st.markdown(" A Lei de Acesso à Informação Nº 12.527, foi sancionada em 18 de novembro de 2011. Esta tem como diretriz o princípio de publicidade máxima da administração pública. ")
@@ -26,7 +25,7 @@ with tab2:
     st.markdown("##### Definição de Portal da Transparência:")
     st.markdown("\"é um site de acesso livre, no qual o cidadão pode encontrar informações sobre como o dinheiro público é utilizado, além de se informar sobre assuntos relacionados à gestão pública\" (Controladoria Geral da União).")
     st.markdown("Dados geralmente disponibilizadas nos portais estão relacionados as áreas de: Licitações, Contratos, Compras, Recursos Humanos, Despesas, Receitas, Tributos, etc.")
-with tab3:
+with tab2:
     st.markdown("#### Portal da Transparência de Cascavel ")
     st.markdown("Tutorial: Acessando e Obtendo Dados em Formato .CSV no Portal da Transparência de Cascavel")
     st.markdown("Este tutorial tem como objetivo ajudar você a navegar pelo Portal da Transparência do Município de Cascavel e obter os dados de seu interesse em formato .CSV. Esse formato é ideal para análise na ferramenta que vamos utilizar, permitindo que você explore os dados de forma mais detalhada.")
