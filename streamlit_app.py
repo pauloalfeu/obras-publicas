@@ -13,8 +13,8 @@ st.markdown("### 🏗️ ANÁLISE DO ANDAMENTO DE OBRAS PÚBLICAS UTILIZANDO DAD
 tab1, tab2, tab3 = st.tabs(["Obra Pública", "Lei de Acesso à Informação", "Portal da Transparência de Cascavel "])
 
 with tab1:
-    st.markdown("#### Obra Pública — Conceito")
-    st.image("https://egob.com/wp-content/uploads/2021/01/egob_obra_publica-1024x671.png", width=300)
+    st.markdown("#### Obra Pública: definição.")
+    st.image("https://egob.com/wp-content/uploads/2021/01/egob_obra_publica-1024x671.png", width=350)
     st.markdown("De acordo com o Conselho Nacional do Ministério Público, obra pública é considerada “toda construção, reforma, fabricação, recuperação ou ampliação de bem público” (CNMP, 2017).")
     st.markdown("Ressalte-se que a qualidade de uma obra depende do adequado gerenciamento de suas diversas etapas intermediárias e da participação de profissionais capacitados (CNMP, 2017).")
 with tab2:
