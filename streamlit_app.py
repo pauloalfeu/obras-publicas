@@ -14,7 +14,6 @@ tab1, tab2 = st.tabs(["🏠 Página Inicial - Conceitos, Tabelas e Gráficos", "
 
 with tab1:
     st.markdown("#### O que Caracteriza uma Obra Pública?")
-    st.divider()
     col1, col2 = st.columns(2)
     with col1:
         st.markdown("###### Definição de Obra Pública:")
