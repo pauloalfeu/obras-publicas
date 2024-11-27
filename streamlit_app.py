@@ -10,19 +10,20 @@ import re
 
 st.set_page_config(page_title="Obras Publicas")
 
-st.sidebar.markdown('''
+st.sidebar.markdown("""
 <style>
 a {
   text-decoration: none;
   color: inherit;
 }
 </style>
+
 # Navegue pela página:
 - [Página Inicial](#section-1)
 - [Conceitos, Tabelas e Gráficos](#section-2)
 - [Escolha da base de dados](#section-3)
 - [Upload da base de dados](#section-4)
-''', unsafe_allow_html=True)
+""", unsafe_allow_html=True)
 
 #st.markdown("### 🏗️ ANÁLISE DO ANDAMENTO DE OBRAS PÚBLICAS UTILIZANDO DADOS DE PORTAIS DE TRANSPARÊNCIA")
 st.markdown("<h3 style='color: #20201E; text-align: center;'> 🏗️ ANÁLISE DO ANDAMENTO DE OBRAS PÚBLICAS UTILIZANDO DADOS DE PORTAIS DE TRANSPARÊNCIA</h3>", unsafe_allow_html=True)
