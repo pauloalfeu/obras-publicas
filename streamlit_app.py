@@ -59,7 +59,7 @@ if uploaded_file is not None:
     # Recebendo arquivo.csv:
     dataframe = pd.read_csv(uploaded_file, sep=';', encoding='latin1')
     Obras_CAC = dataframe
-    st.markdown("Base de dados carregada com sucesso!")
+    st.info("Base de dados carregada com sucesso!")
     ################################### TRATAMENTO DO DATAFRAME
 
     # Convertendo a coluna 'Data de Início' para datetime
