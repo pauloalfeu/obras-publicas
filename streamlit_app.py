@@ -75,7 +75,7 @@ st.divider()
 #st.pyplot(plot)
 st.markdown("""
 <div style='justify-content: center; text-align:center'>
-    <h4 id='section-3' style='color: #20201E;'> 🏙️ Escolha da base de dados: município de Cascavel/PR.</h4>
+    <h4 id="section-3" style='color: #20201E;'> 🏙️ Escolha da base de dados: município de Cascavel/PR.</h4>
     <figure>
     <img src="https://github.com/pauloalfeu/obras-publicas/blob/main/base/cac_reg_lago.png?raw=true" width="700">
     <figcaption>Região do Lago, Cascavel - Paraná, Brasil. (Figura gerada com a biblioteca Prettymap).</figcaption>
