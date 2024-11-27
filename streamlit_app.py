@@ -61,7 +61,7 @@ st.markdown("<h3 style='color: #20201E; text-align: center;'> 🏙️ O municíp
 plot = prettymaps.plot(
     'Região do Lago, Cascavel, Brasil', radius = False,
 )
-st.pyplot(plot)
+#st.pyplot(plot)
 
 
 
