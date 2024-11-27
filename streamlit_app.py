@@ -76,6 +76,8 @@ if uploaded_file is not None:
     # Criando uma nova coluna com tempo da obra em dias
     Obras_CAC['Tempo Obra (Dias)'] = (Obras_CAC['Previsão Conclusão'] - Obras_CAC['Data de Início']).dt.days
 
+    #Renovendo colunas
+    Obras_CAC = Obras_CAC.drop('Entidade', axis=1)
 
 
     ################################### APRESENTANDO O DATAFRAME
