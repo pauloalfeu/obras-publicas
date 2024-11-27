@@ -210,12 +210,14 @@ if uploaded_file is not None:
         
         python_mask = np.array(Image.open('./base/CAC_logo.png')) 
         #para arquivos locais mudar o final do trecho de código acima
-        wordcloud = WordCloud(width=900, height=400, background_color='#f2f3f5', colormap='Set2', mask= python_mask, contour_color="gray", contour_width=1, min_font_size=3).generate_from_frequencies(word_freq)
-        plt.figure(figsize=(10, 7))
+        wordcloud = WordCloud(width=900, height=400, background_color='white', colormap='Set2', mask= python_mask, contour_color="gray", contour_width=1, min_font_size=3).generate_from_frequencies(word_freq)
+
+        # Define a cor da borda (por exemplo, preto)
+        border_color = 'black'
+        plt.figure(figsize=(10, 7), facecolor=border_color)  # Define a cor de fundo (borda)
         plt.imshow(wordcloud, interpolation='bilinear')
         plt.max_font_size = 150
         plt.axis('off')
-        plt.margins(x=0, y=0)
         plt.show()
         st.pyplot(plt)
         st.markdown("A imagem acima representa uma visualização das palavras mais frequentes encontradas nas descrições das obras públicas. Após um processo de limpeza e contagem, as palavras mais comuns, como ""lote"", ""municipal"" e ""pública"", foram removidas para destacar os termos mais relevantes e específicos. Essa nuvem de palavras oferece uma visão geral dos temas e características mais comuns presentes nas obras analisadas.")
