@@ -219,7 +219,7 @@ if uploaded_file is not None:
         plt.imshow(wordcloud, interpolation='bilinear')
         plt.max_font_size = 150
         plt.axis('off')
-        plt.title("Minha Nuvem de Palavras", fontsize=20, fontweight='bold')
+        plt.title("Nuvem de Palavras-Chave: Descrições das Obras Públicas", fontsize=18, fontweight='bold', color='#20201e')
         st.pyplot(plt)
         st.markdown("A imagem acima representa uma visualização das palavras mais frequentes encontradas nas descrições das obras públicas. Após um processo de limpeza e contagem, as palavras mais comuns, como ""lote"", ""municipal"" e ""pública"", foram removidas para destacar os termos mais relevantes e específicos. Essa nuvem de palavras oferece uma visão geral dos temas e características mais comuns presentes nas obras analisadas.")
 
