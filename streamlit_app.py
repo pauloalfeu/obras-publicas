@@ -13,7 +13,7 @@ st.markdown("### 🏗️ ANÁLISE DO ANDAMENTO DE OBRAS PÚBLICAS UTILIZANDO DAD
 tab1, tab2 = st.tabs(["🏠 Página Inicial - Conceitos, Tabelas e Gráficos", "🎯 Tutorial - Obtendo dados no Portal da Transparência de Cascavel "])
 
 with tab1:
-    st.markdown("#### O que Caracteriza uma Obra Pública?")
+    st.markdown("#### O que caracteriza uma Obra Pública?")
     col1, col2 = st.columns(2)
     with col1:
         st.markdown(">**Definição de Obra Pública:**")
