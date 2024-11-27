@@ -23,7 +23,7 @@ with tab1:
     st.markdown("O artigo 3º da lei prevê a utilização de ferramentas de comunicação viabilizadas pela tecnologia da informação. Uma das principais manifestações da utilização da T.I. na publicidade dos dados públicos está no chamados Portais da Transparência.")
     st.markdown("")
     st.markdown("##### Definição de Portal da Transparência:")
-    st.markdown("\"é um site de acesso livre, no qual o cidadão pode encontrar informações sobre como o dinheiro público é utilizado, além de se informar sobre assuntos relacionados à gestão pública\" (Controladoria Geral da União).")
+    st.markdown(">\"é um site de acesso livre, no qual o cidadão pode encontrar informações sobre como o dinheiro público é utilizado, além de se informar sobre assuntos relacionados à gestão pública\" (Controladoria Geral da União).")
     st.markdown("Dados geralmente disponibilizadas nos portais estão relacionados as áreas de: Licitações, Contratos, Compras, Recursos Humanos, Despesas, Receitas, Tributos, etc.")
 with tab2:
     st.markdown("#### Portal da Transparência de Cascavel ")
