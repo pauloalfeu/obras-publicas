@@ -9,29 +9,45 @@ from collections import Counter
 import re
 
 st.set_page_config(page_title="Obras Publicas")
+st.markdown("""<div id='section-1'></div>""", unsafe_allow_html=True)
 
-st.sidebar.markdown("""
-<style>
-a:hover {
-  font-weight: bold;
-}
-</style>
-<a href="#section-1" style="color:#20201e; text-decoration: none;">Início</a>
 
-<a href="#section-2" style="color:#20201e; text-decoration: none;">Conceitos, Tabelas e Gráficos</a>
+def add_anchor(section_id, section_title):
+    st.sidebar.markdown("""
+    <style>
+    a:hover {
+    font-weight: bold;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+    
+    st.sidebar.markdown(f"""
+    <a href='#{section_id}' style="color:#20201e; text-decoration: none;">{section_title}</a>
+    """, unsafe_allow_html=True)
+    
+    st.markdown(f"""<div id='{section_id}'></div>""", unsafe_allow_html=True)
 
-<a href="#section-3" style="color:#20201e; text-decoration: none;">Escolha da base de dados</a>
+def add_section_id(section_id):
+    new_section_id = f"section-{section_id}"
+    return new_section_id
 
-<a href="#section-4" style="color:#20201e; text-decoration: none;">Upload da base de dados</a>
-""", unsafe_allow_html=True)
+def add_section_title(section_title):
+    new_section_title = f"Nova Seção {section_title}"
+    return new_section_title
+
+add_anchor("section-1", "Início")
+
 
 #st.markdown("### 🏗️ ANÁLISE DO ANDAMENTO DE OBRAS PÚBLICAS UTILIZANDO DADOS DE PORTAIS DE TRANSPARÊNCIA")
-st.markdown("<h3 id='section-1' style='color: #20201E; text-align: center;'> 🏗️ ANÁLISE DO ANDAMENTO DE OBRAS PÚBLICAS UTILIZANDO DADOS DE PORTAIS DE TRANSPARÊNCIA</h3>", unsafe_allow_html=True)
+st.markdown("<h3 style='color: #20201E; text-align: center;'> 🏗️ ANÁLISE DO ANDAMENTO DE OBRAS PÚBLICAS UTILIZANDO DADOS DE PORTAIS DE TRANSPARÊNCIA</h3>", unsafe_allow_html=True)
+add_anchor("section-2", "Conceitos, Tabelas e Gráficos")
+add_anchor("section-3", "Tutorial - Portal da Transparência")
 
 ################################### SEÇÃO DE GUIAS
 
 tab1, tab2 = st.tabs(["🏠 Página Inicial - Conceitos, Tabelas e Gráficos", "🎯 Tutorial - Obtendo dados no Portal da Transparência de Cascavel "])
 
+add_anchor("section-4", "Escolha da base de dados")
 with tab1:
     #st.markdown("#### O que caracteriza uma Obra Pública?")
     st.markdown("<h4 style='color: #20201E; text-align: center;'> O que caracteriza uma Obra Pública?</h4>", unsafe_allow_html=True)
@@ -75,7 +91,7 @@ st.divider()
 #st.pyplot(plot)
 st.markdown("""
 <div style='justify-content: center; text-align:center'>
-    <h4 style='color: #20201E;' id="section-3"> 🏙️ Escolha da base de dados: município de Cascavel/PR.</h4>
+    <h4 style='color: #20201E'> 🏙️ Escolha da base de dados: município de Cascavel/PR.</h4>
     <figure>
     <img src="https://github.com/pauloalfeu/obras-publicas/blob/main/base/cac_reg_lago.png?raw=true" width="700">
     <figcaption>Região do Lago, Cascavel - Paraná, Brasil. (Figura gerada com a biblioteca Prettymap).</figcaption>
@@ -86,6 +102,7 @@ st.markdown("""
 ################################### SEÇÃO DE UPLOAD DE DATAFRAME
 
 st.divider()
+add_anchor("section-5", "Carregue a base de dados")
 st.markdown("#### Carregue a base de dados para gerar as tabelas e gráficos:")
 st.markdown("Busque um arquivo **_.csv_** clicando em **\"_Browse files_\"** no campo abaixo:")
 st.warning(":bulb: **Importante:** siga as etapas apresentadas na guia **\"_Tutorial - Obtendo dados no Portal da Transparência de Cascavel_\"** para fazer o download do arquivo correto.")
@@ -136,7 +153,10 @@ if uploaded_file is not None:
 
 
     ################## APRESENTANDO O DATAFRAME // FILTROS DO USUARIO ##################
-
+    
+    #Criando nova ancora
+    
+    add_anchor("section-6", "Aplicando filtros")
     st.divider()
     st.markdown("#### 🔎 Aplicando filtros:")
     st.markdown("Agora que a base de dados foi carregada, você será capaz de filtrar o conteúdo para encontrar dados específicos que podem auxiliar na obtenção de novas informações.")
@@ -226,10 +246,12 @@ if uploaded_file is not None:
             i += 1
 
     st.divider()
+    
+    add_anchor("section-7", "Nuvem de Palavras")
+    st.markdown("#### Nuvem de Palavras-Chave: Descrições das Obras Públicas")
     tab3, tab4 = st.tabs(["Nuvem de palavras", "Base de dados"])
     
     with tab3:
-        st.markdown("#### Nuvem de Palavras-Chave: Descrições das Obras Públicas")
         word_freq = dict(zip(OBRAS_KeyWords['Palavra'], OBRAS_KeyWords['Contagem']))
         #word_freq
         word_freq.pop('lote') #126
