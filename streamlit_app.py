@@ -354,19 +354,24 @@ if uploaded_file is not None:
 
     add_anchor("section-9", "KMeans - Grupos de Duração")
     st.markdown("#### Agrupamento de Obras por Tempo e Percentual de Conclusão")
-    tab7, tab8 = st.tabs(["Grupos de Duração das Obras", "Código da figura"])
+    tab7, tab8 = st.tabs(["Grupos de Duração das Obras", "Código de criação da figura"])
 
     with tab7:
         st.write("O gráfico apresenta a divisão de obras em três grupos distintos, identificados por cores diferentes. Essa divisão foi realizada utilizando o algoritmo K-means, que agrupa os dados com base em similaridades. As obras foram agrupadas considerando o tempo total de execução e o percentual de conclusão. Cada ponto no gráfico representa uma obra, e a cor indica a qual grupo ela pertence.")
         st.markdown("""
         <div style='justify-content: center; text-align:center'>
             <figure>
-            <img src="https://github.com/pauloalfeu/obras-publicas/blob/main/base/KMeansObrasCAC.png?raw=true" width="700">
+            <img src="https://github.com/pauloalfeu/obras-publicas/blob/main/base/KMeansObrasCAC.png?raw=true" width="650">
             <figcaption>Região do Lago, Cascavel - Paraná, Brasil. (Figura gerada com a biblioteca Prettymap).</figcaption>
         </figure>
         </div>
         """, unsafe_allow_html=True)
-
+        st.write("""A análise de agrupamento K-means revelou três perfis distintos de obras.
+        **Grupo Azul:** Geralmente, obras de menor duração e com alto percentual de conclusão. Podem ser projetos menores ou com maior prioridade.
+        **Grupo Verde:** Obras com tempo de execução médio e percentual de conclusão variável. Podem representar um grupo mais heterogêneo de projetos.
+        **Grupo Amarelo:** Obras de maior duração e, em alguns casos, com menor percentual de conclusão. Podem indicar projetos mais complexos ou com atrasos.
+        """)
+     
 
     with tab8:
         st.markdown("""
