@@ -241,6 +241,7 @@ if uploaded_file is not None:
     add_anchor("section-7", "Gráficos de Obras Não Finalizadas")
     st.markdown("#### Total de obras concluídas com menos de 100% por ano")
     tab3, tab4 = st.tabs(["Obras concluídas com menos de 100% por ano", "Quantidade de Obras em Adamento por Ano"])
+    
 
     with tab3:
         st.write("O gráfico abaixo apresenta a quantidade de obras que não foram totalmente concluídas ao longo dos anos. Cada barra representa um ano e sua altura indica o número de obras que não atingiram 100% de conclusão naquele período. ")
@@ -344,5 +345,52 @@ if uploaded_file is not None:
 
     with tab6:
         st.data_editor(OBRAS_KeyWords)
+
+    st.divider()
+
+    ######################################################
+    ###################### KMeans ######################
+    ######################################################
+
+    add_anchor("section-9", "KMeans - Grupos de Duração")
+    st.markdown("#### Agrupamento de Obras por Tempo e Percentual de Conclusão")
+    tab7, tab8 = st.tabs(["Grupos de Duração das Obras", "Código da figura"])
+
+    with tab7:
+        st.write("O gráfico apresenta a divisão de obras em três grupos distintos, identificados por cores diferentes. Essa divisão foi realizada utilizando o algoritmo K-means, que agrupa os dados com base em similaridades. As obras foram agrupadas considerando o tempo total de execução e o percentual de conclusão. Cada ponto no gráfico representa uma obra, e a cor indica a qual grupo ela pertence.")
+        st.markdown("""
+        <div style='justify-content: center; text-align:center'>
+            <figure>
+            <img src="https://github.com/pauloalfeu/obras-publicas/blob/main/base/KMeansObrasCAC.png?raw=true" width="700">
+            <figcaption>Região do Lago, Cascavel - Paraná, Brasil. (Figura gerada com a biblioteca Prettymap).</figcaption>
+        </figure>
+        </div>
+        """, unsafe_allow_html=True)
+
+
+    with tab8:
+        st.markdown("""
+        ```python
+        kmeans = KMeans(n_clusters=3, random_state=0)
+        x = Obras_CAC[['Tempo Obra (Dias)','Percentual Conclusão (%)']].values
+        kmeans.fit(x)
+
+        plt.scatter(# plota os pontos
+            x[:, 0], x[:, 1], #x e y
+            c = kmeans.labels_, #cores de acordo com o grupo
+            marker='o', # pontos com 'o'
+            edgecolor='black', #cor da borda
+            cmap='Set3', #esquema de cores
+            s=100 #tamanho
+        )
+        plt.scatter(# plota os centróides
+            kmeans.cluster_centers_[:,0], kmeans.cluster_centers_[:, 1],#x e y
+            c='red',  #cor fixa
+            marker='*', #pontos marcados com estrela
+            edgecolor='black', #cor da borda
+            s=100 #tamanho
+        )
+        plt.show()
+        """)
 
 st.divider()
