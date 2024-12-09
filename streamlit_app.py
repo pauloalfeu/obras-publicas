@@ -243,9 +243,9 @@ if uploaded_file is not None:
     tab3, tab4 = st.tabs(["Obras concluídas com menos de 100% por ano", "Quantidade de Obras em Adamento por Ano"])
 
     with tab3:
+        st.write("O gráfico apresenta a quantidade de obras que não foram totalmente concluídas ao longo dos anos. Cada barra representa um ano e sua altura indica o número de obras que não atingiram 100% de conclusão naquele período. ")
         #Andamento_per_year
         # Gráfico Total de obras concluídas com menos de 100% por ano
-        # Configuração do estilo com fundo transparente
         # Configuração do estilo com fundo transparente
         sns.set_style("white")
         sns.set(style="white", rc={"figure.facecolor": (0, 0, 0, 0), "axes.facecolor": (0, 0, 0, 0)})
