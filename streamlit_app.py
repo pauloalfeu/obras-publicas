@@ -98,6 +98,8 @@ st.markdown("""
   </figure>
 </div>
 """, unsafe_allow_html=True)
+st.markdown("""Localizada na região Oeste do Paraná, destaca-se como um importante centro econômico e cultural da região Sul do Brasil. Com uma população significativa e em constante crescimento, a cidade é conhecida por sua infraestrutura moderna, universidades renomadas e um robusto setor industrial e comercial. 
+Segundo dados do IBGE, Cascavel ocupa uma posição de destaque no ranking dos municípios paranaenses em termos de população e extensão territorial. Sua história, marcada pela colonização e pelo desenvolvimento agrícola, culminou em uma cidade dinâmica e promissora, que atrai investimentos e impulsiona o desenvolvimento regional. """)
 
 ################################### SEÇÃO DE UPLOAD DE DATAFRAME
 
