@@ -341,6 +341,7 @@ if uploaded_file is not None:
         plt.max_font_size = 150
         plt.axis('off')
         # Ajusta os limites dos eixos para criar uma margem maior
+        plt.subplots_adjust()
         plt.xlim(0, 10)  # Ajusta os limites do eixo x
         plt.ylim(0, 7)   # Ajusta os limites do eixo y
         # Add a text legend below the image
