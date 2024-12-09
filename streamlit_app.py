@@ -342,8 +342,8 @@ if uploaded_file is not None:
         plt.axis('off')
         # Ajusta os limites dos eixos para criar uma margem maior
         plt.subplots_adjust()
-        plt.xlim(0, 10)  # Ajusta os limites do eixo x
-        plt.ylim(0, 7)   # Ajusta os limites do eixo y
+        plt.xlim(1, 10)  # Ajusta os limites do eixo x
+        plt.ylim(1, 7)   # Ajusta os limites do eixo y
         # Add a text legend below the image
         plt.figtext(0.5, 0.01, "Figura gerada com a biblioteca WordCloud", ha="center", fontsize=10)
         st.pyplot(plt)
