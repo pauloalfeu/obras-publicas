@@ -374,7 +374,7 @@ if uploaded_file is not None:
         </figure>
         </div>
         """, unsafe_allow_html=True)
-        st.write("""A análise de agrupamento K-means revelou três perfis distintos de obras.
+        st.markdown("""A análise de agrupamento K-means revelou três perfis distintos de obras.
 
         **Grupo Azul:** Geralmente, obras de menor duração e com alto percentual de conclusão. Podem ser projetos menores ou com maior prioridade.
 
