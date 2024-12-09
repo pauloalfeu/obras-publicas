@@ -341,6 +341,12 @@ if uploaded_file is not None:
         plt.max_font_size = 150
         plt.axis('off')
         st.pyplot(plt)
+        st.markdown("""
+        <div style='justify-content: center; text-align:center'>
+            <figcaption>Figura gerada com a biblioteca WordCloud).</figcaption>
+        </figure>
+        </div>
+        """, unsafe_allow_html=True)
         st.markdown("Analisando a figura, podemos perceber que boa parte das obras municipais são voltadas para a 'Pavimentação', seguida por obras voltadas para 'Escolas'. Outras palavras-chave observadas em ordem de frequência são: iluminação, reforma, adequação, rurais, readequação, saúde, entre outras. Na aba 'Base dados' estão listadas todas as palavras que tiveram mais de 5 menções.")
 
     with tab6:
@@ -360,18 +366,22 @@ if uploaded_file is not None:
         st.write("O gráfico apresenta a divisão de obras em três grupos distintos, identificados por cores diferentes. Essa divisão foi realizada utilizando o algoritmo K-means, que agrupa os dados com base em similaridades. As obras foram agrupadas considerando o tempo total de execução e o percentual de conclusão. Cada ponto no gráfico representa uma obra, e a cor indica a qual grupo ela pertence.")
         st.markdown("""
         <div style='justify-content: center; text-align:center'>
+            <h4 style='color: #20201E'> Grupos de Duração das Obras</h4>
             <figure>
             <img src="https://github.com/pauloalfeu/obras-publicas/blob/main/base/KMeansObrasCAC.png?raw=true" width="650">
-            <figcaption>Região do Lago, Cascavel - Paraná, Brasil. (Figura gerada com a biblioteca Prettymap).</figcaption>
+            <figcaption>Figura gerada com a biblioteca Sklearn).</figcaption>
         </figure>
         </div>
         """, unsafe_allow_html=True)
         st.write("""A análise de agrupamento K-means revelou três perfis distintos de obras.
-        **Grupo Azul:** Geralmente, obras de menor duração e com alto percentual de conclusão. Podem ser projetos menores ou com maior prioridade.
-        **Grupo Verde:** Obras com tempo de execução médio e percentual de conclusão variável. Podem representar um grupo mais heterogêneo de projetos.
-        **Grupo Amarelo:** Obras de maior duração e, em alguns casos, com menor percentual de conclusão. Podem indicar projetos mais complexos ou com atrasos.
+
+        * **Grupo Azul:** Geralmente, obras de menor duração e com alto percentual de conclusão. Podem ser projetos menores ou com maior prioridade.
+
+        * **Grupo Verde:** Obras com tempo de execução médio e percentual de conclusão variável. Podem representar um grupo mais heterogêneo de projetos.
+
+        * **Grupo Amarelo:** Obras de maior duração e, em alguns casos, com menor percentual de conclusão. Podem indicar projetos mais complexos ou com atrasos.
         """)
-     
+
 
     with tab8:
         st.markdown("""
