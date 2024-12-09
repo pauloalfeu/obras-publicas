@@ -376,11 +376,11 @@ if uploaded_file is not None:
         """, unsafe_allow_html=True)
         st.write("""A análise de agrupamento K-means revelou três perfis distintos de obras.
 
-        * **Grupo Azul:** Geralmente, obras de menor duração e com alto percentual de conclusão. Podem ser projetos menores ou com maior prioridade.
+        **Grupo Azul:** Geralmente, obras de menor duração e com alto percentual de conclusão. Podem ser projetos menores ou com maior prioridade.
 
-        * **Grupo Verde:** Obras com tempo de execução médio e percentual de conclusão variável. Podem representar um grupo mais heterogêneo de projetos.
+        **Grupo Verde:** Obras com tempo de execução médio e percentual de conclusão variável. Podem representar um grupo mais heterogêneo de projetos.
 
-        * **Grupo Amarelo:** Obras de maior duração e, em alguns casos, com menor percentual de conclusão. Podem indicar projetos mais complexos ou com atrasos.
+        **Grupo Amarelo:** Obras de maior duração e, em alguns casos, com menor percentual de conclusão. Podem indicar projetos mais complexos ou com atrasos.
         """)
 
 
