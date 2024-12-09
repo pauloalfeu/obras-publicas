@@ -257,7 +257,7 @@ if uploaded_file is not None:
         plt.ylabel('Total de Obras concluídas com menos de 100% por ano')
         plt.autoscale()
         # Criação da figura
-        fig, ax = plt.subplots()
+        #fig, ax = plt.subplots()
         st.pyplot()
 
     with tab4:
