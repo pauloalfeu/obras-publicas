@@ -259,7 +259,7 @@ if uploaded_file is not None:
         plt.xlabel('Ano/Gestão')
         plt.yticks(range(0, 21, 2)) #de zero a vinte, a cada dois ticks
         plt.ylabel('Total de Obras em Adamento')
-        st.plt.show()
+        st.pyplot()
 
     
     ######################################################
