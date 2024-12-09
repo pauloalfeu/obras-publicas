@@ -255,8 +255,8 @@ if uploaded_file is not None:
         fig, ax = plt.subplots()
         ax.set_facecolor('#f2f3f5')
 
-        #st.pyplot(fig)
-        st.pyplot()
+        st.pyplot(fig)
+        #st.pyplot()
 
     with tab4:
         #Total de obras por gestão
