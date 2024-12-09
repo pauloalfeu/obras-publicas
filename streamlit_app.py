@@ -340,13 +340,9 @@ if uploaded_file is not None:
         plt.imshow(wordcloud, interpolation='bilinear')
         plt.max_font_size = 150
         plt.axis('off')
+        # Add a text legend below the image
+        plt.figtext(0.5, 0.01, "Figura gerada com a biblioteca WordCloud", ha="center", fontsize=12)
         st.pyplot(plt)
-        st.markdown("""
-        <div style='justify-content: center; text-align:center'>
-            <figcaption>Figura gerada com a biblioteca WordCloud).</figcaption>
-        </figure>
-        </div>
-        """, unsafe_allow_html=True)
         st.markdown("Analisando a figura, podemos perceber que boa parte das obras municipais são voltadas para a 'Pavimentação', seguida por obras voltadas para 'Escolas'. Outras palavras-chave observadas em ordem de frequência são: iluminação, reforma, adequação, rurais, readequação, saúde, entre outras. Na aba 'Base dados' estão listadas todas as palavras que tiveram mais de 5 menções.")
 
     with tab6:
