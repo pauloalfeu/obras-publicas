@@ -261,6 +261,7 @@ if uploaded_file is not None:
         st.write("É possível observar que os anos de 2020 e 2022 apresentaram um pico de obras inacabadas. Essa informação pode ser crucial para identificar gargalos e tomar medidas para melhorar a eficiência na conclusão dos projetos.")
 
     with tab4:
+        st.write("Este gráfico de barras ilustra a evolução do número de obras em andamento ao longo dos anos. No eixo x, temos os anos, e no eixo y, o total de obras em andamento para cada ano. ")
         #Total de obras por gestão
         sns.barplot(x='Ano', hue='Ano', y= 'Qtd', data=Andamento_per_year, palette='Set2', legend=False, gap=0.1, width=0.8, edgecolor='none')
         plt.title('Quantidade de Obras em Adamento por Ano')
@@ -268,6 +269,8 @@ if uploaded_file is not None:
         plt.yticks(range(0, 21, 2)) #de zero a vinte, a cada dois ticks
         plt.ylabel('Total de Obras em Adamento')
         st.pyplot()
+
+        st.write("A escolha da paleta de cores 'Set2' facilita a visualização das diferentes categorias. Analisando o gráfico, podemos perceber que os anos mais recentes são os que possuem a maior quantidade de obras em andamento, tendência essa natural dada a escala deste projetos.")
 
     
     ######################################################
