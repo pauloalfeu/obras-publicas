@@ -407,6 +407,11 @@ if uploaded_file is not None:
             s=100 #tamanho
         )
         plt.show()
+
+        # Identificar a linha do Dataframe que possui o valor minimo de cada grupo
+        Obras_CAC['cluster'] = kmeans.labels_
+        result_df = Obras_CAC.groupby('cluster')['Tempo Obra (Dias)'].idxmin()
+        print(result_df)
         """)
 
 st.divider()
