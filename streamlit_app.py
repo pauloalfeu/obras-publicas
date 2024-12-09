@@ -252,7 +252,10 @@ if uploaded_file is not None:
         plt.xlabel('Ano/Gestão')
         plt.yticks(range(0, 7, 1)) #de zero a vinte, a cada dois ticks
         plt.ylabel('Total de Obras concluídas com menos de 100% por ano')
+        fig, ax = plt.subplots()
+        ax.set_facecolor('#f2f3f5')
 
+        #st.pyplot(fig)
         st.pyplot()
 
     with tab4:
