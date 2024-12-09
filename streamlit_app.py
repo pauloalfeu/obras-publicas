@@ -261,7 +261,7 @@ if uploaded_file is not None:
 
         # Exibição do gráfico no Streamlit
         st.data_editor(Not100_by_year)
-        st.pyplot(fig)
+        st.pyplot()
 
     with tab4:
         #Total de obras por gestão
