@@ -369,7 +369,7 @@ if uploaded_file is not None:
         <div style='justify-content: center; text-align:center'>
             <h4 style='color: #20201E'> Grupos de Duração das Obras</h4>
             <figure>
-            <img src="https://github.com/pauloalfeu/obras-publicas/blob/main/base/KMeansObrasCAC.png?raw=true" width="650">
+            <img src="https://github.com/pauloalfeu/obras-publicas/blob/main/base/KMeansObrasCAC.png?raw=true" width="650"> <br>
             <figcaption>Figura gerada com a biblioteca Sklearn).</figcaption>
         </figure>
         </div>
