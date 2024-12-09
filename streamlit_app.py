@@ -341,7 +341,7 @@ if uploaded_file is not None:
         plt.max_font_size = 150
         plt.axis('off')
         # Add a text legend below the image
-        plt.figtext(0.5, 0.01, "Figura gerada com a biblioteca WordCloud", ha="center", fontsize=12)
+        plt.figtext(0.5, 0.01, "Figura gerada com a biblioteca WordCloud", ha="center", fontsize=10)
         st.pyplot(plt)
         st.markdown("Analisando a figura, podemos perceber que boa parte das obras municipais são voltadas para a 'Pavimentação', seguida por obras voltadas para 'Escolas'. Outras palavras-chave observadas em ordem de frequência são: iluminação, reforma, adequação, rurais, readequação, saúde, entre outras. Na aba 'Base dados' estão listadas todas as palavras que tiveram mais de 5 menções.")
 
