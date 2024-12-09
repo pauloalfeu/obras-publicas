@@ -48,7 +48,7 @@ add_anchor("section-3", "Tutorial - Portal da Transparência")
 
 tab1, tab2 = st.tabs(["🏠 Página Inicial - Conceitos, Tabelas e Gráficos", "🎯 Tutorial - Obtendo dados no Portal da Transparência de Cascavel "])
 
-add_anchor("section-4", "Escolha da base de dados")
+add_anchor("section-4", "Escolha da Base de Dados")
 with tab1:
     #st.markdown("#### O que caracteriza uma Obra Pública?")
     st.markdown("<h4 style='color: #20201E; text-align: center;'> O que caracteriza uma Obra Pública?</h4>", unsafe_allow_html=True)
@@ -109,7 +109,7 @@ st.markdown("""Segundo dados do IBGE (2023), Cascavel ocupa uma posição de des
 ################################### SEÇÃO DE UPLOAD DE DATAFRAME
 
 st.divider()
-add_anchor("section-5", "Carregue a base de dados")
+add_anchor("section-5", "Carregue a Base de Dados")
 st.markdown("#### Carregue a base de dados para gerar as tabelas e gráficos:")
 st.markdown("Busque um arquivo **_.csv_** clicando em **\"_Browse files_\"** no campo abaixo:")
 st.warning(":bulb: **Importante:** siga as etapas apresentadas na guia **\"_Tutorial - Obtendo dados no Portal da Transparência de Cascavel_\"** para fazer o download do arquivo correto.")
@@ -181,7 +181,7 @@ if uploaded_file is not None:
     
     #Criando nova ancora
     
-    add_anchor("section-6", "Aplicando filtros")
+    add_anchor("section-6", "Aplicando Filtros")
     st.divider()
     st.markdown("#### 🔎 Aplicando filtros:")
     st.markdown("Agora que a base de dados foi carregada, você será capaz de filtrar o conteúdo para encontrar dados específicos que podem auxiliar na obtenção de novas informações.")
