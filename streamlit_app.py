@@ -316,6 +316,7 @@ if uploaded_file is not None:
     tab5, tab6 = st.tabs(["Nuvem de palavras", "Base de dados"])
     
     with tab5:
+        st.markdown("A imagem acima representa uma visualização das palavras mais frequentes encontradas nas descrições das obras públicas. Após um processo de limpeza e contagem, as palavras mais comuns, como ""lote"", ""municipal"" e ""pública"", foram removidas para destacar os termos mais relevantes e específicos. Essa nuvem de palavras oferece uma visão geral dos temas e características mais comuns presentes nas obras analisadas.")
         word_freq = dict(zip(OBRAS_KeyWords['Palavra'], OBRAS_KeyWords['Contagem']))
         #word_freq
         word_freq.pop('lote') #126
