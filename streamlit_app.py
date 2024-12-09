@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
+import seaborn as sns
 from wordcloud import WordCloud
 import PIL.Image as Image
 from collections import Counter
@@ -215,11 +216,37 @@ if uploaded_file is not None:
         sit_and_pct = and_sit[(and_sit['Percentual Conclusão (%)']>= percent[0]) & (and_sit['Percentual Conclusão (%)']<=percent[1])]
         placeholder.data_editor(sit_and_pct, key='sit_and_pct')
 
-    ################################### Adicionando o gráfico de distribuição das obras por ‘data de inicio’
-    
+    ######################################################
+    ###################### GRÁFICOS ######################
+    ######################################################
+
+    add_anchor("section-7", "Gráficos de Obras não Finalizadas")
+    st.markdown("#### Total de obras concluídas com menos de 100% por ano")
+    tab3, tab4 = st.tabs(["Obras concluídas com menos de 100% por ano", "Obras em Adamento por Ano"])
+
+    with tab3:
+        # Gráfico Total de obras concluídas com menos de 100% por ano
+        sns.barplot(x='Ano', hue='Ano', y= 'Qtd', data=Not100_by_year, palette='Set2', legend=False, gap=0.1, width=0.8)
+        plt.title('Quantidade de obras concluídas com % abaixo de 100')
+        plt.xlabel('Ano/Gestão')
+        plt.yticks(range(0, 7, 1)) #de zero a vinte, a cada dois ticks
+        plt.ylabel('Total de Obras concluídas com menos de 100% por ano')
+        plt.show()
+
+    with tab4:
+        #Total de obras por gestão
+        sns.barplot(x='Ano', hue='Ano', y= 'Qtd', data=Andamento_per_year, palette='Set2', legend=False, gap=0.1, width=0.8)
+        plt.title('Quantidade de Obras em Adamento por Ano')
+        plt.xlabel('Ano/Gestão')
+        plt.yticks(range(0, 21, 2)) #de zero a vinte, a cada dois ticks
+        plt.ylabel('Total de Obras em Adamento')
+        plt.show()
 
     
-    ################################### 
+    ######################################################
+    ################ NUVEM DE PALAVRAS ###################
+    ######################################################
+
     #from collections import Counter
     #import re
 
@@ -253,11 +280,11 @@ if uploaded_file is not None:
 
     st.divider()
     
-    add_anchor("section-7", "Nuvem de Palavras")
+    add_anchor("section-8", "Nuvem de Palavras")
     st.markdown("#### Nuvem de Palavras-Chave: Descrições das Obras Públicas")
-    tab3, tab4 = st.tabs(["Nuvem de palavras", "Base de dados"])
+    tab5, tab6 = st.tabs(["Nuvem de palavras", "Base de dados"])
     
-    with tab3:
+    with tab5:
         word_freq = dict(zip(OBRAS_KeyWords['Palavra'], OBRAS_KeyWords['Contagem']))
         #word_freq
         word_freq.pop('lote') #126
@@ -282,7 +309,7 @@ if uploaded_file is not None:
         st.pyplot(plt)
         st.markdown("A imagem acima representa uma visualização das palavras mais frequentes encontradas nas descrições das obras públicas. Após um processo de limpeza e contagem, as palavras mais comuns, como ""lote"", ""municipal"" e ""pública"", foram removidas para destacar os termos mais relevantes e específicos. Essa nuvem de palavras oferece uma visão geral dos temas e características mais comuns presentes nas obras analisadas.")
 
-    with tab4:
+    with tab6:
         st.data_editor(OBRAS_KeyWords)
 
 st.divider()
