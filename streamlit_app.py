@@ -330,7 +330,7 @@ if uploaded_file is not None:
         
         python_mask = np.array(Image.open('./base/CAC_logo.png')) 
         #para arquivos locais mudar o final do trecho de código acima
-        wordcloud = WordCloud(width=900, height=400, background_color='#f2f3f5', colormap='Set2', mask= python_mask, contour_color="gray", contour_width=1, min_font_size=3).generate_from_frequencies(word_freq)
+        wordcloud = WordCloud(width=900, height=350, background_color='#f2f3f5', colormap='Set2', mask= python_mask, contour_color="gray", contour_width=1, min_font_size=3).generate_from_frequencies(word_freq)
 
         # Define a cor da borda (por exemplo, preto)
         border_color = '#f2f3f5'
@@ -341,7 +341,7 @@ if uploaded_file is not None:
         plt.max_font_size = 150
         plt.axis('off')
         # Add a text legend below the image
-        plt.figtext(0.5, -0.01, "Figura gerada com a biblioteca WordCloud", ha="center", fontsize=10)
+        plt.figtext(0.5, 0.01, "Figura gerada com a biblioteca WordCloud", ha="center", fontsize=10)
         st.pyplot(plt)
         st.markdown("Analisando a figura, podemos perceber que boa parte das obras municipais são voltadas para a 'Pavimentação', seguida por obras voltadas para 'Escolas'. Outras palavras-chave observadas em ordem de frequência são: iluminação, reforma, adequação, rurais, readequação, saúde, entre outras. Na aba 'Base dados' estão listadas todas as palavras que tiveram mais de 5 menções.")
 
