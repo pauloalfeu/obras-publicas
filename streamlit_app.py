@@ -245,7 +245,7 @@ if uploaded_file is not None:
     with tab3:
         #Andamento_per_year
         # Gráfico Total de obras concluídas com menos de 100% por ano
-        sns.set_style("white")  # Estilo base
+        #sns.set_style("white")  # Estilo base
         sns.set(style="white", rc={"axes.facecolor": (0, 0, 0, 0)})  # Fundo transparente
 
         sns.barplot(x='Ano', hue='Ano', y= 'Qtd', data=Not100_by_year, palette='Set2', legend=False, gap=0.1, width=0.8)
