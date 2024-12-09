@@ -260,6 +260,7 @@ if uploaded_file is not None:
         fig, ax = plt.subplots()
 
         # Exibição do gráfico no Streamlit
+        st.data_editor(Not100_by_year)
         st.pyplot(fig)
 
     with tab4:
