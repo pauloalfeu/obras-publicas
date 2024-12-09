@@ -359,7 +359,7 @@ if uploaded_file is not None:
     ###################### KMeans ######################
     ######################################################
 
-    add_anchor("section-9", "Grupos de Duração")
+    add_anchor("section-9", "Grupos de Duração das Obras")
     st.markdown("#### Agrupamento de Obras por Tempo e Percentual de Conclusão")
     tab7, tab8 = st.tabs(["Grupos de Duração das Obras", "Código de criação da figura"])
 
