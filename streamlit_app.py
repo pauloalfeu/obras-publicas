@@ -136,6 +136,14 @@ if uploaded_file is not None:
     #Renovendo colunas
     Obras_CAC = Obras_CAC.drop('Entidade', axis=1)
     Obras_CAC = Obras_CAC.drop('Número/Ano Intervenção', axis=1)
+
+    # Filter de Obras em Adamento por ano
+    Andamento = Obras_CAC[Obras_CAC['Situação'] == 'Em Andamento']
+    # Agrupamento por ano + count
+    And_per_year = Andamento.groupby('Ano')['Número/Ano Obra'].count()
+    Andamento_per_year = And_per_year.reset_index()
+    # Renomeando as colunas
+    Andamento_per_year.columns = ['Ano', 'Qtd']
     Obras_CAC = Obras_CAC.drop('Número/Ano Obra', axis=1)
 
     # Convertendo os valores da coluna 'Valor Total'
@@ -220,19 +228,11 @@ if uploaded_file is not None:
     ###################### GRÁFICOS ######################
     ######################################################
 
-    add_anchor("section-7", "Gráficos de Obras não Finalizadas")
+    add_anchor("section-7", "Gráficos de Obras Não Finalizadas")
     st.markdown("#### Total de obras concluídas com menos de 100% por ano")
     tab3, tab4 = st.tabs(["Obras concluídas com menos de 100% por ano", "Obras em Adamento por Ano"])
 
     with tab3:
-        # Filter de Obras em Adamento por ano
-        Andamento = Obras_CAC[Obras_CAC['Situação'] == 'Em Andamento']
-
-        # Agrupamento por ano + count
-        And_per_year = Andamento.groupby('Ano')['Número/Ano Obra'].count()
-        Andamento_per_year = And_per_year.reset_index()
-        # Renomeando as colunas
-        Andamento_per_year.columns = ['Ano', 'Qtd']
         #Andamento_per_year
         # Gráfico Total de obras concluídas com menos de 100% por ano
         sns.barplot(x='Ano', hue='Ano', y= 'Qtd', data=Not100_by_year, palette='Set2', legend=False, gap=0.1, width=0.8)
