@@ -250,7 +250,7 @@ if uploaded_file is not None:
         plt.xlabel('Ano/Gestão')
         plt.yticks(range(0, 7, 1)) #de zero a vinte, a cada dois ticks
         plt.ylabel('Total de Obras concluídas com menos de 100% por ano')
-        st.plt.show()
+        st.pyplot()
 
     with tab4:
         #Total de obras por gestão
