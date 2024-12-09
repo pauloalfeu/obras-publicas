@@ -268,6 +268,7 @@ if uploaded_file is not None:
         plt.xlabel('Ano/Gestão')
         plt.yticks(range(0, 21, 2)) #de zero a vinte, a cada dois ticks
         plt.ylabel('Total de Obras em Adamento')
+        plt.autoscale()
         st.pyplot()
 
         st.write("A escolha da paleta de cores 'Set2' facilita a visualização das diferentes categorias. Analisando o gráfico, podemos perceber que os anos mais recentes são os que possuem a maior quantidade de obras em andamento, tendência essa natural dada a escala deste projetos.")
