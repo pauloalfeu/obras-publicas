@@ -240,11 +240,7 @@ if uploaded_file is not None:
 
     add_anchor("section-7", "Gráficos de Obras Não Finalizadas")
     st.markdown("#### Total de obras concluídas com menos de 100% por ano")
-<<<<<<< HEAD
     tab3, tab4 = st.tabs(["Obras concluídas com menos de 100% por ano", "|  Obras em Adamento por Ano"])
-=======
-    tab3, tab4 = st.tabs(["Obras concluídas com menos de 100% por ano", "| Obras em Adamento por Ano"])
->>>>>>> b7e00f872c74c5c2f1b204b19d672879f3001b7b
 
     with tab3:
         #Andamento_per_year
