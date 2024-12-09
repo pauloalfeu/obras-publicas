@@ -259,10 +259,6 @@ if uploaded_file is not None:
         # Criação da figura
         fig, ax = plt.subplots()
 
-        # Ajustar os limites dos eixos (opcional)
-        plt.xlim(min(Not100_by_year['Ano']), max(Not100_by_year['Ano']))
-        plt.ylim(0, max(Not100_by_year['Qtd']) * 1.1)
-
         # Exibição do gráfico no Streamlit
         st.pyplot(fig)
 
