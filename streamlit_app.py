@@ -316,7 +316,7 @@ if uploaded_file is not None:
     tab5, tab6 = st.tabs(["Nuvem de palavras", "Base de dados"])
     
     with tab5:
-        st.markdown("A imagem acima representa uma visualização das palavras mais frequentes encontradas nas descrições das obras públicas. Após um processo de limpeza e contagem, as palavras mais comuns, como ""lote"", ""municipal"" e ""pública"", foram removidas para destacar os termos mais relevantes e específicos. Essa nuvem de palavras oferece uma visão geral dos temas e características mais comuns presentes nas obras analisadas.")
+        st.markdown("A imagem abaixo representa uma visualização das palavras mais frequentes encontradas nas descrições das obras públicas. Após um processo de limpeza e contagem, as palavras mais comuns, como ""lote"", ""municipal"" e ""pública"", foram removidas para destacar os termos mais relevantes e específicos. Essa nuvem de palavras oferece uma visão geral dos temas e características mais comuns presentes nas obras analisadas.")
         word_freq = dict(zip(OBRAS_KeyWords['Palavra'], OBRAS_KeyWords['Contagem']))
         #word_freq
         word_freq.pop('lote') #126
@@ -340,7 +340,7 @@ if uploaded_file is not None:
         plt.max_font_size = 150
         plt.axis('off')
         st.pyplot(plt)
-        st.markdown("A imagem acima representa uma visualização das palavras mais frequentes encontradas nas descrições das obras públicas. Após um processo de limpeza e contagem, as palavras mais comuns, como ""lote"", ""municipal"" e ""pública"", foram removidas para destacar os termos mais relevantes e específicos. Essa nuvem de palavras oferece uma visão geral dos temas e características mais comuns presentes nas obras analisadas.")
+        st.markdown("Analisando a figura, podemos perceber que boa parte das obras municipais são voltadas para a 'Pavimentação', seguida por obras voltadas para 'Escolas'. Outras palavras-chave observadas em ordem de frequência são: iluminação, reforma, adequação, rurais, readequação, saúde, entre outras. Na aba 'Base dados' estão listadas todas as palavras que tiveram mais de 5 menções.")
 
     with tab6:
         st.data_editor(OBRAS_KeyWords)
