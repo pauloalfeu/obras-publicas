@@ -341,7 +341,7 @@ if uploaded_file is not None:
         plt.max_font_size = 150
         plt.axis('off')
         # Ajusta os limites dos eixos para criar uma margem maior
-        plt.xlim(-10, 10)  # Ajusta os limites do eixo x
+        plt.xlim(-5, 10)  # Ajusta os limites do eixo x
         plt.ylim(-3, 5)   # Ajusta os limites do eixo y
         # Add a text legend below the image
         plt.figtext(0.5, 0.01, "Figura gerada com a biblioteca WordCloud", ha="center", fontsize=10)
