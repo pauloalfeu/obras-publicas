@@ -89,11 +89,7 @@ with tab2:
 st.divider()
 #plot = prettymaps.plot('Região do Lago, Cascavel, Brasil', radius = False,)
 #st.pyplot(plot)
-st.markdown("""
-<div style='justify-content: center; text-align:center'>
-    <h4 style='color: #20201E'> 🏙️ Escolha da base de dados: município de Cascavel/PR.</h4>
-</div>
-""")
+st.markdown("""<div style='justify-content: center; text-align:center'><h4 style='color: #20201E'> 🏙️ Escolha da base de dados: município de Cascavel/PR.</h4></div>""")
 st.markdown("""Localizada na região Oeste do Paraná, destaca-se como um importante centro econômico e cultural da região Sul do Brasil. Com uma população significativa e em constante crescimento, a cidade é conhecida por sua infraestrutura moderna, universidades renomadas e um robusto setor industrial e comercial.""") 
 st.markdown("""
 <div style='justify-content: center; text-align:center'>
