@@ -246,16 +246,17 @@ if uploaded_file is not None:
         #Andamento_per_year
         # Gráfico Total de obras concluídas com menos de 100% por ano
         #sns.set_style("white")  # Estilo base
-        sns.set(style="white", rc={"axes.facecolor": (0, 0, 0, 0)})  # Fundo transparente
+        sns.set_style("white")
+        sns.set(style="white", rc={"axes.facecolor": (0, 0, 0, 0)})
 
         sns.barplot(x='Ano', hue='Ano', y= 'Qtd', data=Not100_by_year, palette='Set2', legend=False, gap=0.1, width=0.8)
         plt.title('Quantidade de obras concluídas com % abaixo de 100')
         plt.xlabel('Ano/Gestão')
-        plt.yticks(range(0, 7, 1))  # de zero a vinte, a cada dois ticks
         plt.ylabel('Total de Obras concluídas com menos de 100% por ano')
+        plt.ylim(0, max(Not100_by_year['Qtd']) * 1.1)  # Ajustando o limite superior do eixo y
 
         fig, ax = plt.subplots()
-        ax.set_facecolor('#f2f3f5')  # Definindo a cor de fundo do gráfico
+        ax.set_facecolor('#f2f3f5')
 
         st.pyplot(fig)
 
