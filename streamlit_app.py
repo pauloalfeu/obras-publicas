@@ -243,7 +243,7 @@ if uploaded_file is not None:
     tab3, tab4 = st.tabs(["Obras concluídas com menos de 100% por ano", "Quantidade de Obras em Adamento por Ano"])
 
     with tab3:
-        st.write("O gráfico apresenta a quantidade de obras que não foram totalmente concluídas ao longo dos anos. Cada barra representa um ano e sua altura indica o número de obras que não atingiram 100% de conclusão naquele período. ")
+        st.write("O gráfico abaixo apresenta a quantidade de obras que não foram totalmente concluídas ao longo dos anos. Cada barra representa um ano e sua altura indica o número de obras que não atingiram 100% de conclusão naquele período. ")
         #Andamento_per_year
         # Gráfico Total de obras concluídas com menos de 100% por ano
         # Configuração do estilo com fundo transparente
@@ -257,6 +257,8 @@ if uploaded_file is not None:
         plt.ylabel('Total de Obras concluídas com menos de 100% por ano', fontsize=11)
         plt.autoscale()
         st.pyplot()
+
+        st.write("É possível observar que os anos de 2020 e 2022 apresentaram um pico de obras inacabadas. Essa informação pode ser crucial para identificar gargalos e tomar medidas para melhorar a eficiência na conclusão dos projetos.")
 
     with tab4:
         #Total de obras por gestão
