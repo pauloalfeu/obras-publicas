@@ -89,10 +89,11 @@ with tab2:
 st.divider()
 #plot = prettymaps.plot('Região do Lago, Cascavel, Brasil', radius = False,)
 #st.pyplot(plot)
-st.markdown("""Localizada na região Oeste do Paraná, destaca-se como um importante centro econômico e cultural da região Sul do Brasil. Com uma população significativa e em constante crescimento, a cidade é conhecida por sua infraestrutura moderna, universidades renomadas e um robusto setor industrial e comercial.""") 
+ 
 st.markdown("""
 <div style='justify-content: center; text-align:center'>
     <h4 style='color: #20201E'> 🏙️ Escolha da base de dados: município de Cascavel/PR.</h4>
+    <p>Localizada na região Oeste do Paraná, destaca-se como um importante centro econômico e cultural da região Sul do Brasil. Com uma população significativa e em constante crescimento, a cidade é conhecida por sua infraestrutura moderna, universidades renomadas e um robusto setor industrial e comercial.</p>
     <figure>
     <img src="https://github.com/pauloalfeu/obras-publicas/blob/main/base/cac_reg_lago.png?raw=true" width="700">
     <figcaption>Região do Lago, Cascavel - Paraná, Brasil. (Figura gerada com a biblioteca Prettymap).</figcaption>
