@@ -336,17 +336,17 @@ if uploaded_file is not None:
         border_color = '#f2f3f5'
         # Adicionando título
         plt.figure(figsize=(10, 7), facecolor=border_color)  # Define a cor de fundo (borda)
-        plt.title("Palavras frequentes", fontsize=15)
+        plt.title("Palavras frequentes", fontsize=16)
         plt.imshow(wordcloud, interpolation='bilinear')
         plt.max_font_size = 150
         plt.axis('off')
         # Ajusta os limites dos eixos para criar uma margem maior
-        plt.subplots_adjust()
+        #plt.subplots_adjust()
         plt.tight_layout()
         #plt.xlim(1, 10)  # Ajusta os limites do eixo x
         #plt.ylim(1, 7)   # Ajusta os limites do eixo y
         # Add a text legend below the image
-        plt.figtext(0.5, 0.01, "Figura gerada com a biblioteca WordCloud", ha="center", fontsize=10)
+        plt.figtext(0.5, 0.01, "Figura gerada com a biblioteca WordCloud", ha="center", fontsize=11)
         st.pyplot(plt)
         st.markdown("Analisando a figura, podemos perceber que boa parte das obras municipais são voltadas para a 'Pavimentação', seguida por obras voltadas para 'Escolas'. Outras palavras-chave observadas em ordem de frequência são: iluminação, reforma, adequação, rurais, readequação, saúde, entre outras. Na aba 'Base dados' estão listadas todas as palavras que tiveram mais de 5 menções.")
 
