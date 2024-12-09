@@ -326,7 +326,7 @@ if uploaded_file is not None:
         word_freq.pop('12020') # 13
         word_freq.pop('102020') # 12
         
-        python_mask = np.array(Image.open('./base/CAC_logo.png')) 
+        python_mask = np.array(Image.open("https://github.com/pauloalfeu/obras-publicas/blob/main/base/CAC_logo.png?raw=true")) 
         #para arquivos locais mudar o final do trecho de código acima
         wordcloud = WordCloud(width=900, height=400, background_color='#f2f3f5', colormap='Set2', mask= python_mask, contour_color="gray", contour_width=1, min_font_size=3).generate_from_frequencies(word_freq)
 
