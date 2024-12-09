@@ -225,6 +225,15 @@ if uploaded_file is not None:
     tab3, tab4 = st.tabs(["Obras concluídas com menos de 100% por ano", "Obras em Adamento por Ano"])
 
     with tab3:
+        # Filter de Obras em Adamento por ano
+        Andamento = Obras_CAC[Obras_CAC['Situação'] == 'Em Andamento']
+
+        # Agrupamento por ano + count
+        And_per_year = Andamento.groupby('Ano')['Número/Ano Obra'].count()
+        Andamento_per_year = And_per_year.reset_index()
+        # Renomeando as colunas
+        Andamento_per_year.columns = ['Ano', 'Qtd']
+        #Andamento_per_year
         # Gráfico Total de obras concluídas com menos de 100% por ano
         sns.barplot(x='Ano', hue='Ano', y= 'Qtd', data=Not100_by_year, palette='Set2', legend=False, gap=0.1, width=0.8)
         plt.title('Quantidade de obras concluídas com % abaixo de 100')
@@ -234,6 +243,18 @@ if uploaded_file is not None:
         plt.show()
 
     with tab4:
+        #Quantidade de obras concluídas com % abaixo de 100
+
+        obrs_not100 = Obras_CAC[Obras_CAC['Percentual Conclusão (%)'] != 100.00]
+        conc_not100 = obrs_not100.loc[obrs_not100['Situação'] == 'Concluída']
+
+        # Agrupamento por ano + count
+        Not100_per_year = conc_not100.groupby('Ano')['Número/Ano Obra'].count()
+        Not100_by_year = Not100_per_year.reset_index()
+        Not100_by_year.columns = ['Ano', 'Qtd'] # Renomeando as colunas
+
+        #conc_not100.sort_values(by=['Ano'], ascending=True)
+        Not100_by_year.sort_values(by=['Ano'], ascending=True)
         #Total de obras por gestão
         sns.barplot(x='Ano', hue='Ano', y= 'Qtd', data=Andamento_per_year, palette='Set2', legend=False, gap=0.1, width=0.8)
         plt.title('Quantidade de Obras em Adamento por Ano')
