@@ -254,7 +254,7 @@ if uploaded_file is not None:
         sns.barplot(x='Ano', hue='Ano', y='Qtd', data=Not100_by_year, palette='Set2', legend=False, gap=0.1, width=0.8)
         plt.title('Quantidade de obras concluídas com % abaixo de 100')
         plt.xlabel('Ano/Gestão')
-        plt.ylabel('Total de Obras concluídas com menos de 100% por ano')
+        plt.ylabel('Total de Obras concluídas com menos de 100% p/ ano')
         plt.autoscale()
         # Criação da figura
         #fig, ax = plt.subplots()
