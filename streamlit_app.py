@@ -258,9 +258,6 @@ if uploaded_file is not None:
         plt.autoscale()
         # Criação da figura
         fig, ax = plt.subplots()
-
-        # Exibição do gráfico no Streamlit
-        st.data_editor(Not100_by_year)
         st.pyplot()
 
     with tab4:
