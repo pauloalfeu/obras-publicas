@@ -251,7 +251,7 @@ if uploaded_file is not None:
         sns.set(style="white", rc={"figure.facecolor": (0, 0, 0, 0), "axes.facecolor": (0, 0, 0, 0)})
 
         # Criação do gráfico
-        sns.barplot(x='Ano', hue='Ano', y='Qtd', data=Not100_by_year, palette='Set2', legend=False, gap=0.1, width=0.8, edgecolor='black')
+        sns.barplot(x='Ano', hue='Ano', y='Qtd', data=Not100_by_year, palette='Set2', legend=False, gap=0.1, width=0.8, edgecolor='none')
         plt.title('Quantidade de obras concluídas com % abaixo de 100')
         plt.xlabel('Ano/Gestão')
         plt.ylabel('Total de Obras concluídas com menos de 100% por ano', fontsize=11)
@@ -260,7 +260,7 @@ if uploaded_file is not None:
 
     with tab4:
         #Total de obras por gestão
-        sns.barplot(x='Ano', hue='Ano', y= 'Qtd', data=Andamento_per_year, palette='Set2', legend=False, gap=0.1, width=0.8)
+        sns.barplot(x='Ano', hue='Ano', y= 'Qtd', data=Andamento_per_year, palette='Set2', legend=False, gap=0.1, width=0.8, edgecolor='none')
         plt.title('Quantidade de Obras em Adamento por Ano')
         plt.xlabel('Ano/Gestão')
         plt.yticks(range(0, 21, 2)) #de zero a vinte, a cada dois ticks
